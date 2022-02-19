@@ -1,21 +1,22 @@
 
 body {
-    background-color: orange;
+    background-color: #ffffff;
 }
-
 
 input[type="button"] {
 
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 40px;
 
     font-family: 'Roboto';
     font-size: 15px;
+    font-weight: bold;
 
-    background-color: deepskyblue;
+    background-color: #ffffff;
 
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-right: -70px;
 
     border: 3px solid;
     border-radius: 10px;
@@ -53,4 +54,34 @@ a{
 
 .context-menu ul li:hover {
     background: darkgray;
+}
+
+
+
+
+
+section {
+    display: -webkit-flex;
+    display: flex;
+    float: left;
+}
+
+nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #ccc;
+    padding-bottom: 600px;
+}
+
+header {
+    background-color: #666;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
 }

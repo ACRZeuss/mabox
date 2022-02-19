@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 80;
 
 app.use(express.static(__dirname + '/'))
 
-app.get('/', (req, res) => res.redirect('/public/index.html'))
+app.get('/', (req, res) => res.redirect('./'))
 
 
 const storage = multer.diskStorage({
@@ -86,7 +86,7 @@ app.delete('/dosyalar', async (req, res, next) => {
 
     console.log(err)
 
-    res.send("Dosya Silmede Hata!");
+    res.send("Dosya Silinemedi!");
   }
 })
 
@@ -105,7 +105,7 @@ app.get('/rename', async (req, res, next) => { //rename?path=eskikonum&newPath=y
 
     console.error(err);
 
-    res.status(400).send("Yeniden Adlandırmada Hata!");
+    res.status(400).send("Yeniden Adlandırma Başarısız!");
   }
 
 })
@@ -125,7 +125,7 @@ app.get('/yeniKlasor', async (req, res) => {
   catch (err) {
 
     console.error(err);
-    res.status(400).send("Klasör Oluşturmada Hata!");
+    res.status(400).send("Klasör Oluşturma Başarısız!");
 
   }
 
