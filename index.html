@@ -1,71 +1,97 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr-TR">
 
-<head>
+  <head>
+
+    <link rel="icon" href="assets/one-drive.png" type="image/x-icon" />
+
+    <title>MaBox</title>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MaBox - Remastered</title>
-
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+
     <script src="js/script.js"></script>
     <script src="js/buttonCodes.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/sidebars.js"></script>
 
-</head>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
 
-<body>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <header>
-        <h2>MaBox - Remastered</h2>
-    </header>
+    <style>
+      .bd-placeholder-img {
 
-    <section>
-        <nav>
-            <div class="container">
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-                <div class="row no-gutters">
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
 
-                    <div class="col">
-                        <input type="button" value="Dosya Yükle" height="10px" style="position: top; bottom: 0;" onclick='document.getElementById("dosyaSec").click();'>
-                    </div>
-                    <div class="w-100"></div>
-                    <div class="col">
-                        <input type="button" value="Yeni Klasör" height="10px" style="position: top; bottom: 0;" onclick='yeniKlasor(currentPath)'>
-                    </div>
+    <!-- Custom styles for this template -->
+    <link href="css/sidebars.css" rel="stylesheet">
 
-                </div>
+  </head>
 
-            </div>
-        </nav>
-    </section>
+  <body class="row">
 
-    
-            
 
-            
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="bootstrap" viewBox="0 0 118 94">
+        <title>Bootstrap</title>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z">
+        </path>
+      </symbol>
+    </svg>
 
-    <div id="contextMenu" class="context-menu" style="display:none">
-        <ul>
-            <li><a onclick="defaultButtonOnClickEvent(tiklananButon.value)">Aç</a></li>
-            <li><a onclick="yenidenAdlandir(currentPath + '/' + tiklananButon.value)">Yeniden Adlandır</a></li>
-            <li><a onclick="sil(currentPath + '/' + tiklananButon.value)">Sil</a></li>
+    <div class="col-2">
+      <div class="d-inline-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32">
+            <use x:link href="#bootstrap" />
+          </svg>
+          <span class="fs-4">MaBox</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <input class="dosyaYukle" type="button" value="⬆️ Dosya Yükle" height="10px" onclick='document.getElementById("dosyaSec").click();'>
+          </li>
+          <li class="nav-item">
+            <input class="yeniKlasor" type="button" value="📂 Yeni Klasör" height="10px" onclick='yeniKlasor(currentPath)'>
+          </li>
         </ul>
-    </div>
+        <hr>
+      </div>
 
-    <form method="post" enctype="multipart/form-data" action="/dosyalar" id="yukle_form">
+      <div id="contextMenu" class="context-menu" style="display:none">
+        <ul>
+          <li><a onclick="defaultButtonOnClickEvent(tiklananButon.value)">Aç</a></li>
+          <li><a onclick="yenidenAdlandir(currentPath + '/' + tiklananButon.value)">Yeniden Adlandır</a></li>
+          <li><a onclick="sil(currentPath + '/' + tiklananButon.value)">Sil</a></li>
+        </ul>
+      </div>
+
+      <form method="post" enctype="multipart/form-data" action="/dosyalar" id="yukle_form">
         <input type="file" id="dosyaSec" name="web" value="Yükle" multiple="multiple" hidden>
         <input type="submit" value="onayla" id="onayla" hidden>
-    </form>
+      </form>
+    </div>
 
-</body>
+  </body>
 
 </html>

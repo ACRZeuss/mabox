@@ -58,7 +58,7 @@ app.post('/dosyalar', upload.any(), async (req, res, next) => {
     catch (err) {
       console.error(err);
 
-      errors.push(`${file_name} yüklemesi basarısız`)
+      errors.push(`${file_name} yüklemesi başarısız`)
     }
 
   }

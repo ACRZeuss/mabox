@@ -1,4 +1,3 @@
-
 const urlParams = new URLSearchParams(window.location.search)
 
 const path = urlParams.get('path') ? urlParams.get('path') : ""
@@ -74,9 +73,7 @@ function defaultButtonOnClickEvent(button) {
     hideMenu();
 }
 
-
 async function buttonOlustur({ name, type, value, onclick }) {
-
 
     var element = document.createElement("input");
 
@@ -84,6 +81,7 @@ async function buttonOlustur({ name, type, value, onclick }) {
     element.type = type;
     element.name = name;
     element.value = value;
+    element.className = "buttonolustur"
 
     element.onclick = onclick;
 
