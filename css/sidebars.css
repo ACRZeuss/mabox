@@ -146,10 +146,18 @@ main {
   color: #fff;
 
   margin-top: 15px;
-  margin-bottom: 680px;
+  margin-bottom: 630px;
 
   border: 3px solid;
   border-radius: 10px;
+
+}
+
+.developers {
+
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
 
 }
 
