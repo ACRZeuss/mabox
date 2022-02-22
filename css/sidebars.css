@@ -153,6 +153,14 @@ main {
 
 }
 
+.developers {
+
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+
+}
+
 .context-menu {
   position: absolute;
   text-align: center;
