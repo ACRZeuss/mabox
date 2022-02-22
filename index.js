@@ -8,9 +8,6 @@ const PORT = process.env.PORT || 80;
 
 app.use(express.static(__dirname + '/'))
 
-app.get('/', (req, res) => res.redirect('./'))
-
-
 const storage = multer.diskStorage({
 
   destination: (req, file, cb) => {
