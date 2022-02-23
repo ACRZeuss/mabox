@@ -9,6 +9,7 @@
   },
   "keywords": [],
   "author": "Batuhan Demir",
+  "author2": "Erhan Polat",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.1.3",
