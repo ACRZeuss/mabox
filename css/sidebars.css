@@ -29,7 +29,7 @@ body {
 }
 
 .navHr {
-  width: 97%;
+  display: block;
   margin-top: 3px;
   padding-bottom: 15px;
   border-style: inset;
@@ -55,7 +55,7 @@ body {
 }
 
 .brand {
-  margin-right: 800px;
+  margin-right: 1250px;
 }
 
 .yeniKlasor {
