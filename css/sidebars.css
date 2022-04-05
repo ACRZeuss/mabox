@@ -29,7 +29,7 @@ body {
 }
 
 .navHr {
-  display: block;
+  width: 100%;
   margin-top: 3px;
   padding-bottom: 15px;
   border-style: inset;
@@ -79,6 +79,7 @@ body {
   text-align: center;
   background: lightgray;
   border: 1px solid black;
+  width: 200px;
 }
 
 .context-menu ul {
