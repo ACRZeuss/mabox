@@ -29,7 +29,7 @@ body {
 }
 
 .navHr {
-  display: block;
+  width: 100%;
   margin-top: 3px;
   padding-bottom: 15px;
   border-style: inset;
