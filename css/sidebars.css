@@ -103,3 +103,7 @@ body {
 .context-menu ul li:hover {
   background: darkgray;
 }
+
+.buttons {
+  display: block;
+}
